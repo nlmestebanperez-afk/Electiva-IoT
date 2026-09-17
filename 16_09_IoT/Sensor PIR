@@ -1,1 +1,18 @@
+void setup() {
+  pinMode(2, OUTPUT);
+  pinMode(16, OUTPUT);
+  pinMode(12, INPUT);
+}
 
+void loop() {
+  int lectura=digitalRead(12);
+  if(lectura==1){
+    digitalWrite(2,1);
+    digitalWrite(16,1);
+    delay(2000);
+  }
+  else{
+    digitalWrite(2,0);
+    digitalWrite(16,0);
+  }
+}
